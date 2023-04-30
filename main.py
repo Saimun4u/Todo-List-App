@@ -6,10 +6,13 @@ todolist.append(user_todo.capitalize())
 
 while True:
     print('Do you want to add another todo? yes or no' )
-    response = 'yes' or 'no'
+    response = input()
     if response == 'yes':
-        user_todo = input('Enter a todo: ')
-        todolist.append(user_todo.capitalize())
-    break
+        new_todo = input('Enter another todo: ')
+        todolist.append(new_todo.capitalize())
+    elif response == 'no':
+        break
+
+print('\n')
 
 print(f'Your todos are: {todolist}')
